@@ -19,7 +19,7 @@ function getWeather(cityName) {
         pressure: data.main.pressure,
         humidity: data.main.humidity,
         wind: data.wind,
-        weather: data.weather,
+        weather: data.weather[0],
       };
       return outputData;
     })
