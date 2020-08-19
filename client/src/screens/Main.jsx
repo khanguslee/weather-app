@@ -1,10 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import InputSearch from "../components/InputSearch";
 
 import "./Main.scss";
 
-function Main() {
+function Main(props) {
+  const { searchHandler } = props;
   return (
     <div className="container">
       <div className="header">
@@ -14,10 +16,21 @@ function Main() {
       <div className="body"></div>
 
       <div className="footer">
-        <InputSearch placeholder={"Enter city and country"} />
+        <InputSearch
+          placeholder={"Enter city and country"}
+          onSubmitHandler={searchHandler}
+        />
       </div>
     </div>
   );
 }
+
+Main.propTypes = {
+  searchHandler: PropTypes.func,
+};
+
+Main.defaultProps = {
+  searchHandler: () => {},
+};
 
 export default Main;
