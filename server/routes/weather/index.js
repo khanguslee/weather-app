@@ -1,8 +1,7 @@
 const weatherRouter = require('express').Router();
 
-weatherRouter.get('/:cityName', (req, res) => {
-  const inputCity = req.params.cityName;
-  res.send(`${inputCity} was submitted`);
-});
+const weatherController = require('../../controllers/weather.controller');
+
+weatherRouter.get('/:cityName', weatherController.getWeather);
 
 module.exports = weatherRouter;
