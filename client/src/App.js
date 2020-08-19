@@ -2,7 +2,7 @@ import React from "react";
 
 import MainController from "./screens/MainController";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
