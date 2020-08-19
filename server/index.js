@@ -4,11 +4,11 @@ const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-routes(app);
-
 // Add middleware to parse requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use('/api/v1', routes);
 
 // Host the build folder of the client application
 app.use(express.static('../client/build'));

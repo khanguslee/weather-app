@@ -1,5 +1,6 @@
+const router = require('express').Router();
 const weatherRoute = require('./weather');
 
-module.exports = function routes(app) {
-  app.use('/weather', weatherRoute);
-};
+router.use('/weather', weatherRoute);
+
+module.exports = router;
