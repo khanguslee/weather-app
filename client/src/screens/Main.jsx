@@ -14,7 +14,7 @@ function Main() {
       <div className="body"></div>
 
       <div className="footer">
-        <InputSearch />
+        <InputSearch placeholder={"Enter city and country"} />
       </div>
     </div>
   );
