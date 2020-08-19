@@ -27,10 +27,12 @@ function Main(props) {
 
 Main.propTypes = {
   searchHandler: PropTypes.func,
+  data: PropTypes.object,
 };
 
 Main.defaultProps = {
   searchHandler: () => {},
+  data: {},
 };
 
 export default Main;
