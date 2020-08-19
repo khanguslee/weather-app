@@ -12,7 +12,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "cd server && yarn start",
-    "server-watch": "cd server %% yarn start-watch",
+    "server-watch": "cd server && yarn start-watch",
     "dev": "concurrently --kill-others-on-fail \"yarn server-watch\" \"yarn client\""
   }
 }
