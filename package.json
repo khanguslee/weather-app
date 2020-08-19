@@ -1,0 +1,9 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Simple MERN stack weather app",
+  "main": "index.js",
+  "repository": "git@github.com:khanguslee/weather-app.git",
+  "author": "khanguslee <khanguslee@gmail.com>",
+  "license": "MIT"
+}
