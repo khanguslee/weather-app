@@ -3,3 +3,11 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
+body > #root > div {
+  height: 100vh;
+}
+
+.App {
+  background-color: rgba(238, 238, 238, 0.3);
+}
