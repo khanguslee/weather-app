@@ -12,6 +12,14 @@ Clone the repository to get a local copy of the repository.
 git clone  https://github.com/khanguslee/weather-app.git
 ```
 
+### OpenWeather API Key
+
+The application also uses the OpenWeather API to get weather data. To be able to use the API, you will need to get your own API key.
+
+1. Sign up [here](https://openweathermap.org/).
+2. Create a `.env` file inside the `server` directory.
+3. Add `OPEN_WEATHER_API_KEY = <YOUR_API_KEY_HERE>` to the `.env` file
+
 ### Installation
 
 Since the server and client projects have been split, you will need to install libraries in both folders. To do this from the root of the project, please run the following:
