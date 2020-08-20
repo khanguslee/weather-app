@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "./InfoWeatherCard.scss";
+
 function InfoWeatherCard(props) {
   const { humidity, pressure, rain, wind } = props;
   return (
