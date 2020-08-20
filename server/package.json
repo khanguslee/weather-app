@@ -23,5 +23,9 @@
   },
   "optionalDependencies": {
     "fsevents": "2.1.2"
+  },
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
   }
 }
