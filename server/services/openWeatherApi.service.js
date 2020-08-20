@@ -11,15 +11,19 @@ function getWeather(cityName) {
     .then((response) => {
       const { data } = response;
 
+      // Get rain in past hour
+      const rainValue = data.rain ? data.rain['1h'] : null;
+
       // Output necessary data
       const outputData = {
         city: data.name,
         country: data.sys.country,
+        rain: rainValue,
         temperature: data.main.temp,
         pressure: data.main.pressure,
         humidity: data.main.humidity,
         wind: data.wind,
-        weather: data.weather,
+        weather: data.weather[0],
       };
       return outputData;
     })
