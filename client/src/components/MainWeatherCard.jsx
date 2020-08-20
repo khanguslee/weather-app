@@ -18,7 +18,15 @@ function MainWeatherCard(props) {
 MainWeatherCard.propTypes = {
   city: PropTypes.string,
   country: PropTypes.string,
-  temperature: PropTypes.string,
+  temperature: PropTypes.number,
   weather: PropTypes.object,
 };
+
+MainWeatherCard.defaultProps = {
+  city: "",
+  country: "",
+  temperature: "",
+  weather: "",
+};
+
 export default MainWeatherCard;

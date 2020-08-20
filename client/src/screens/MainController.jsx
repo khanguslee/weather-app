@@ -4,25 +4,7 @@ import axios from "axios";
 import Main from "./Main";
 
 function MainController() {
-  const initialWeatherData = {
-    city: "",
-    country: "",
-    temperature: null,
-    pressure: 0,
-    humidity: 0,
-    wind: {
-      speed: 0,
-      deg: 0,
-      gust: 0,
-    },
-    weather: {
-      id: 0,
-      main: "",
-      description: "",
-      icon: "",
-    },
-  };
-  const [weatherData, setWeatherData] = useState(initialWeatherData);
+  const [weatherData, setWeatherData] = useState(undefined);
   const searchHandler = async (searchCity) => {
     try {
       const response = await axios.get(`/api/v1/weather/${searchCity}`);
