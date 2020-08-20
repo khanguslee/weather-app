@@ -11,8 +11,10 @@
   },
   "scripts": {
     "client": "cd client && yarn start",
+    "client-build": "cd client && yarn run build",
     "server": "cd server && yarn start",
     "server-watch": "cd server && yarn start-watch",
-    "dev": "concurrently --kill-others-on-fail \"yarn server-watch\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server-watch\" \"yarn client\"",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   }
 }
