@@ -18,6 +18,6 @@
     "server-install": "cd server && yarn",
     "server-watch": "cd server && yarn start-watch",
     "dev": "concurrently --kill-others-on-fail \"yarn server-watch\" \"yarn client\"",
-    "heroku-postbuild": "yarn run server-install && cd .. && yarn run client-install && yarn run build"
+    "heroku-postbuild": "yarn run server-install && yarn run client-install && yarn run client-build"
   }
 }
