@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 import InputSearch from "../components/InputSearch";
 import MainWeatherCard from "../components/MainWeatherCard";
 import InfoWeatherCard from "../components/InfoWeatherCard";
+import Alert from "../components/Alert";
 
 import "./Main.scss";
 
 function Main(props) {
-  const { searchHandler, data } = props;
+  const { searchHandler, data, alert } = props;
 
   const kelvinToCelsius = (inputTemp) => {
     return inputTemp - 273.15;
@@ -47,6 +48,8 @@ function Main(props) {
         )}
       </div>
 
+      {alert.message && <Alert message={alert.message} type={alert.type} />}
+
       <div className="footer">
         <InputSearch
           placeholder={"Enter city and country"}
@@ -60,11 +63,13 @@ function Main(props) {
 Main.propTypes = {
   searchHandler: PropTypes.func,
   data: PropTypes.object,
+  alert: PropTypes.object,
 };
 
 Main.defaultProps = {
   searchHandler: () => {},
   data: undefined,
+  alert: { message: "", type: "warn" },
 };
 
 export default Main;
