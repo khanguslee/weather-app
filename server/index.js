@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
+const { connectDb } = require('./models');
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use('/api/v1', routes);
 // Host the build folder of the client application
 app.use(express.static('../client/build'));
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}.`);
+connectDb().then(async () => {
+  app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}.`);
+  });
 });
