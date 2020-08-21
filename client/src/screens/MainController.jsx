@@ -5,14 +5,21 @@ import Main from "./Main";
 
 function MainController() {
   const [weatherData, setWeatherData] = useState(undefined);
-  const [alertMessage, setAlertMessage] = useState({
+
+  const initialAlertMessage = {
     message: "",
     type: "warn",
-  });
+  };
+  const [alertMessage, setAlertMessage] = useState(initialAlertMessage);
+
+  const resetAlert = () => {
+    setAlertMessage(initialAlertMessage);
+  };
 
   const searchHandler = async (searchCity) => {
     try {
       const response = await axios.get(`/api/v1/weather/${searchCity}`);
+      resetAlert();
       setWeatherData(response.data);
     } catch (err) {
       // TODO: Display error banner
