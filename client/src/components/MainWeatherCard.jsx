@@ -11,6 +11,7 @@ function MainWeatherCard(props) {
     <div className="mainWeatherContainer">
       <p>{cityCountryHeader}</p>
       <p className="temperatureResult">{temperatureText}</p>
+      <p>{weather.main}</p>
     </div>
   );
 }
