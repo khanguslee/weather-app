@@ -3,7 +3,7 @@ import { useState } from "react";
 function useAlert() {
   const initialAlertMessage = {
     message: "",
-    type: "warn",
+    type: "",
   };
   const [alertMessage, setAlertMessage] = useState(initialAlertMessage);
 
@@ -14,7 +14,7 @@ function useAlert() {
     });
   const resetMessage = () => setAlertMessage(initialAlertMessage);
 
-  return [alertMessage, setMessage, resetMessage];
+  return { alertMessage, setMessage, resetMessage };
 }
 
 export default useAlert;
