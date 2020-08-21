@@ -19,8 +19,15 @@ function MainController() {
   const searchHandler = async (searchCity) => {
     try {
       const response = await axios.get(`/api/v1/weather/${searchCity}`);
-      resetAlert();
-      setWeatherData(response.data);
+      if (response.data) {
+        resetAlert();
+        setWeatherData(response.data);
+      } else {
+        setAlertMessage({
+          message: `${searchCity} was not found`,
+          type: "warn",
+        });
+      }
     } catch (err) {
       // TODO: Display error banner
       setAlertMessage({ message: "Error retrieving city", type: "warn" });
