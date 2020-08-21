@@ -48,9 +48,8 @@ function Main(props) {
         )}
       </div>
 
-      {alert.message && <Alert message={alert.message} type={alert.type} />}
-
       <div className="footer">
+        {alert.message && <Alert message={alert.message} type={alert.type} />}
         <InputSearch
           placeholder={"Enter city and country"}
           onSubmitHandler={searchHandler}
