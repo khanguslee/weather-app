@@ -38,6 +38,8 @@ function Main(props) {
               weather={data.weather}
             />
 
+            <hr />
+
             <InfoWeatherCard
               humidity={data.humidity}
               pressure={data.pressure}
