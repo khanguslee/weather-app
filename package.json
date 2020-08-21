@@ -15,6 +15,7 @@
     "client": "cd client && yarn start",
     "client-install": "cd client && yarn",
     "client-build": "cd client && yarn run build",
+    "client-test": "cd client && yarn test",
     "server": "cd server && yarn start",
     "server-install": "cd server && yarn",
     "server-watch": "cd server && yarn start-watch",
