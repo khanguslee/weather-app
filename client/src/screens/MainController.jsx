@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import useAlert from "../hooks/useAlert";
 import Main from "./Main";
 
 function MainController() {
   const [weatherData, setWeatherData] = useState(undefined);
-
-  const initialAlertMessage = {
-    message: "",
-    type: "warn",
-  };
-  const [alertMessage, setAlertMessage] = useState(initialAlertMessage);
-
-  const resetAlert = () => {
-    setAlertMessage(initialAlertMessage);
-  };
+  const [alertMessage, setAlertMessage, resetAlert] = useAlert();
 
   const searchHandler = async (searchCity) => {
     try {
@@ -23,14 +15,11 @@ function MainController() {
         resetAlert();
         setWeatherData(response.data);
       } else {
-        setAlertMessage({
-          message: `${searchCity} was not found`,
-          type: "warn",
-        });
+        setAlertMessage(`${searchCity} was not found`, "warn");
       }
     } catch (err) {
       // TODO: Display error banner
-      setAlertMessage({ message: "Error retrieving city", type: "warn" });
+      setAlertMessage("Error retrieving city", "warn");
     }
   };
 
