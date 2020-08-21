@@ -10,7 +10,14 @@ function MainWeatherCard(props) {
   return (
     <div className="mainWeatherContainer">
       <p>{cityCountryHeader}</p>
-      <p className="temperatureResult">{temperatureText}</p>
+      <div className="temperatureResult">
+        <img
+          alt={weather.description}
+          src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+        />
+        <p>{temperatureText}</p>
+      </div>
+
       <p>{weather.main}</p>
     </div>
   );
