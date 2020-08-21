@@ -6,7 +6,11 @@ import Main from "./Main";
 
 function MainController() {
   const [weatherData, setWeatherData] = useState(undefined);
-  const { alertMessage, setMessage: setAlertMessage, resetAlert } = useAlert();
+  const {
+    alertMessage,
+    setMessage: setAlertMessage,
+    resetMessage: resetAlert,
+  } = useAlert();
 
   const searchHandler = async (searchCity) => {
     try {
