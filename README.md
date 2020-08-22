@@ -52,4 +52,4 @@ yarn run start
 
 ## Documentation
 
-[REST API Documentation]('server/README.md')
+[REST API Documentation](https://github.com/khanguslee/weather-app/blob/server-readme/server/README.md#api-documentation)
