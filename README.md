@@ -49,3 +49,7 @@ Once you have built the React application, you will need to run the server using
 ```bash
 yarn run start
 ```
+
+## Documentation
+
+[REST API Documentation](https://github.com/khanguslee/weather-app/blob/server-readme/server/README.md#api-documentation)
