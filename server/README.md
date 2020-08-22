@@ -49,3 +49,17 @@ Required:
       }
     }
     ```
+
+- **Error Response**
+
+  City was not found
+
+  - **Code**: 404
+  - **Content**
+
+  ```json
+  {
+    "error": string,
+    "message": string
+  }
+  ```
