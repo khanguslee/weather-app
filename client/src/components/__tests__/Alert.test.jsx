@@ -6,7 +6,7 @@ import Alert from "../Alert";
 describe("Alert component", () => {
   it("renders an alert message", () => {
     const testMessage = "test alert";
-    const testType = "test type";
+    const testType = "warning";
     const wrapper = shallow(<Alert message={testMessage} type={testType} />);
 
     expect(wrapper.text()).toEqual(testMessage);
