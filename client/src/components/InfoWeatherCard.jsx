@@ -7,10 +7,10 @@ function InfoWeatherCard(props) {
   const { humidity, pressure, rain, wind } = props;
   return (
     <div className="infoWeatherContainer">
-      <p>Humidity: {humidity}%</p>
-      <p>Pressure: {pressure} Pa</p>
-      <p>Wind Speed: {wind.speed} m/s</p>
-      {rain && <p>Rain: {rain} mm</p>}
+      <p data-testid="humidity-text">Humidity: {humidity}%</p>
+      <p data-testid="pressure-text">Pressure: {pressure} Pa</p>
+      <p data-testid="wind-speed-text">Wind Speed: {wind.speed} m/s</p>
+      {rain && <p data-testid="rain-text">Rain: {rain} mm</p>}
     </div>
   );
 }

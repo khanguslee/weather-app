@@ -9,16 +9,19 @@ function MainWeatherCard(props) {
   const temperatureText = temperature ? `${temperature}°C` : "";
   return (
     <div className="mainWeatherContainer">
-      <p>{cityCountryHeader}</p>
+      <p data-testid="city-country-text">{cityCountryHeader}</p>
       <div className="temperatureResult">
-        <img
-          alt={weather.description}
-          src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
-        />
-        <p>{temperatureText}</p>
+        {weather.icon && (
+          <img
+            data-testid="weather-icon"
+            alt={weather.description}
+            src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+          />
+        )}
+        <p data-testid="temperature-text">{temperatureText}</p>
       </div>
 
-      <p>{weather.main}</p>
+      <p data-testid="weather-description-text">{weather.main}</p>
     </div>
   );
 }

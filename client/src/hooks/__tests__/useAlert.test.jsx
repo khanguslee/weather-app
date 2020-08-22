@@ -1,5 +1,5 @@
 import { renderHook, act } from "@testing-library/react-hooks";
-import useAlert from "./useAlert";
+import useAlert from "../useAlert";
 
 describe("useAlert", () => {
   it("should have an empty initial message", () => {
