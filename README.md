@@ -52,4 +52,4 @@ yarn run start
 
 ## Documentation
 
-[REST API Documentation]('./server/README.md')
+[REST API Documentation]('server/README.md')
