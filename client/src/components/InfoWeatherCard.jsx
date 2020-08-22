@@ -21,4 +21,13 @@ InfoWeatherCard.propTypes = {
   rain: PropTypes.number,
   wind: PropTypes.object,
 };
+
+InfoWeatherCard.defaultProps = {
+  humidity: 0,
+  pressure: 0,
+  rain: 0,
+  wind: {
+    speed: 0,
+  },
+};
 export default InfoWeatherCard;
