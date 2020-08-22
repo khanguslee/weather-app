@@ -1,10 +1,18 @@
+$error-background: #ea8685;
 $warning-background: #f7d794;
-$warning-text: #f19066;
+$text: #303952;
 
 .alert {
   text-align: center;
-  background-color: $warning-background;
-  color: $warning-text;
+
+  &.warning {
+    background-color: $warning-background;
+  }
+
+  &.error {
+    background-color: $error-background;
+  }
+  color: $text;
 
   margin: 0 2em;
   margin-bottom: 1em;

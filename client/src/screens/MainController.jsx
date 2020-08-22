@@ -19,11 +19,11 @@ function MainController() {
         resetAlert();
         setWeatherData(response.data);
       } else {
-        setAlertMessage(`${searchCity} was not found`, "warn");
+        setAlertMessage(`${searchCity} was not found`, "warning");
       }
     } catch (err) {
       // TODO: Display error banner
-      setAlertMessage("Error retrieving city", "warn");
+      setAlertMessage("Error retrieving city", "error");
     }
   };
 
